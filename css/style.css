@@ -13,8 +13,8 @@ body {
   align-items: center;
 }
 header h1 {
-  margin: 40px 0px;
-  font-size: 56px;
+  margin: 50px 0px;
+  font-size: 76px;
   font-weight: 700;
   color: rgba(117, 183, 158, 1);
 }
@@ -27,18 +27,37 @@ header h1 {
   max-width: 1000px;
 }
 .carta {
-  width: 117px;
-  height: 146px;
-  border: 1px solid rgba(153, 206, 168, 1);
+  width: 150px;
+  height: 200px;
+  position: relative;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid rgba(153, 206, 168, 1);
   border-radius: 5px;
   background-color: rgba(167, 233, 175, 1);
+  box-shadow: 12px 8px 13px -2px rgba(0,0,0,0.69);
   display: flex;
   align-items: center;
   justify-content: center;
+  backface-visibility: hidden;
+  transition: all .5s;
+  transform-style: preserve-3d;
 }
 .carta img {
   width: 100px;
   height: 100px;
+}
+.frente {
+  transform: rotateY(180deg);
+}
+.viraFrente {
+  transform: rotateY(0deg);
+}
+.viraVerso {
+  transform: rotateY(-180deg);
 }
 @media (max-width: 767px) {
   header h1 {
