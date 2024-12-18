@@ -53,7 +53,6 @@ function virarCarta(elemento){
     cartasViradas++;
     jogadas++;
   }
-  console.log(jogadas);
   setTimeout(conferePar, 500); 
 }
 function conferePar(){
